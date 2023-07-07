@@ -20,15 +20,13 @@ class AccountView(APIView):
         data = {
             'firstName': request.data.get('Name'),
             'lastName': request.data.get('LastName'),
-            #'creationDate': request.data.get(''),
             'accountEmail': request.data.get('Email'),
-            #'accountID': request.data.get(''),
             'fake_ccNumber': request.data.get('ccNumber'),
             'fake_ccIssuer': request.data.get('ccIssuer'),
-            'fake_ethereumAddress': request.data.get('ethereumAddress'),
             'fake_currencyName': request.data.get('currencyName'),
             'fake_currencyCode': request.data.get('currencyCode'),
         }
+
         serializer = AccountSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
@@ -66,12 +64,9 @@ class AccountsDetailedView(APIView):
         data = {
             'firstName': request.data.get('Name'),
             'lastName': request.data.get('LastName'),
-            #'creationDate': request.data.get(''),
             'accountEmail': request.data.get('Email'),
-            #'accountID': request.data.get(''),
             'fake_ccNumber': request.data.get('ccNumber'),
             'fake_ccIssuer': request.data.get('ccIssuer'),
-            'fake_ethereumAddress': request.data.get('ethereumAddress'),
             'fake_currencyName': request.data.get('currencyName'),
             'fake_currencyCode': request.data.get('currencyCode'),
         }

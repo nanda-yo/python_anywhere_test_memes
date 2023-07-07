@@ -8,10 +8,8 @@ class AccountSerializer(serializers.ModelSerializer):
                   "lastName",
                   "creationDate",
                   "accountEmail",
-                  "accountID",
                   "fake_ccNumber",
                   "fake_ccIssuer",
-                  "fake_ethereumAddress",
                   "fake_currencyName",
                   "fake_currencyCode"
                   ]
