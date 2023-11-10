@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Root directory
+{% endblock %}
+
+{% block content %}
+
+<h1>  Django meme website and api</h1>
+
+
+{% if user.is_authenticated %}
+
+<h2><a href="{% url 'test_memes_api:api'%}"> Api </a></h2>
+
+{%else%}
+
+<h2><p>Required <a href="registration/">registration</a></p> </h2>
+<h2><p> Or <a href="accounts/login">Log In</a></p></h2>
+
+{% endif %}
+{% endblock %}

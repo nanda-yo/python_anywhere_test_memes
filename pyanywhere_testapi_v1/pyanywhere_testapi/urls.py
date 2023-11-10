@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from test_memes_api import urls as test_memes_api_urls
+from . import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('',views.index, name = 'index'),
+    path('admin/', admin.site.urls,name = 'adminpanel'),
     path('api-auth/',include('rest_framework.urls')),
-    path('api/',include(test_memes_api_urls)),
+    path('api/',include(test_memes_api_urls),name ='api'),
+    path('registration/', views.registrationRequest,name="Registration"),
+    path('accounts/',include("django.contrib.auth.urls")),
+
+
 ]

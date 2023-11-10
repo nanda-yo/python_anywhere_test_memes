@@ -1,0 +1,41 @@
+body {
+  background-color: lightblue;
+  font-family: verdana;
+  font-size:18px;
+  margin:0;
+
+
+}
+
+header {
+  position:relative;
+  top: 0;
+  width: 100%;
+  background-color: orange;
+  font-family: verdana;
+}
+
+footer {
+  position:absolute;
+  background: #252429;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  z-index: -1;
+  color: #ffffff;
+}
+
+ft-1 {
+position:relative;
+padding:0rem;
+font-size:inherited;
+
+}
+
+.ft-hd {
+  font-size:25px !important;
+  position:absolute;
+  left:0px;
+  right:0px;
+
+}
